@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: Helvetica;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 4px;
+}
+
+.contenedor .header {
+    padding: 15px;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(92, 92, 92);
+    color: white;
+}
+
+.contenedor .header .header-links ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.contenedor .header .header-links ul li {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.contenedor .sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    grid-template-rows: 2 / 4;
+    background-color: red;
+    display: grid;
+    align-items: center;
+    gap: 50px;
+    padding: 5px;
+}
+
+.contenedor .sidebar .box {
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+.contenedor .sidebar .box:nth-child(1) {
+    border-radius: 5px;
+}
+
+.contenedor .nav {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    font-size: 0.6rem;
+}
+
+.contenedor .nav .nav-links ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.contenedor .nav .nav-links ul li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.contenedor .article {
+    padding: 10px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    background-color: lightgrey;
+}
+
+.contenedor .article .art {
+    padding: 15px;
+    height: 200px;
+    background-color: white;
+}
+
+.contenedor .article .art .title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contenedor .footer {
+    padding: 10px;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    background-color: rgb(92, 92, 92);
+    color: white;
+    text-align: center;
+}
